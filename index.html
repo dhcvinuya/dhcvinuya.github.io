@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <title>Daryll Harold Vinuya</title>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <h4>Portfolio</h4>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Skillset</a></li>
-        <li><a href="#">Contacts</a></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
-    <!--Home Section-->
-    <section id="home" >
-      <div class="container">
-        <h1>Daryll Harold Vinuya</h1>
-        <p class="job">Web Developer/Mobile Developer</p>
-          <div class="icon">
-            <a href="" class="fa fa-linkedin"></a>
-            <a href="" class="fa fa-github"></a>
-          </div>
-          <a href="" class="btn btn-fill">Projects</a>
-          <a href="#about" class="btn btn-border">About Me</a>
-      </div>
-    </section>
-    <!--End of Home Section-->
-    <!--About Section-->
-    <section id="about">
-      <div class="about">
-        <h1>About Me</h1>
-        
-      </div>
-    </section>
-    <!--End of About Section-->
-    <!--Projects Section-->
-    <section>
+</head>
+    <body>
+        <header>
+            <a href="" class="logo">Portfolio</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#skillset">Skillset</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </header>
+        <!--Home Section-->
+        <section id="home">
+            <div class="container">
+                <h1>Daryll Harold Vinuya</h1>
+                    <p class="job">Web Developer/Mobile Developer</p>
+                <div class="icon">
+                    <a href="" class="fa fa-linkedin"></a>
+                    <a href="" class="fa fa-github"></a>
+                </div>
+                <a href="" class="btn btn-fill">Projects</a>
+                <a href="" class="btn btn-border">About Me</a>
+            </div>
+        </section>
+        <!--End of Home Section-->
+        <!--Projects Section-->
+        <section id="project">
 
-    </section>
-    <!--End of Projects Section-->
-    <!--Skillset Section-->
-    <section>
+        </section>
+        <!--End of Projects Section-->
+        <!--Skillset Section-->
+        <section id="skillset" class="banner">
+            <div>
+                <div class="imgBx">
+                    <img src="./images/bg3.png" class="active">
+                    <img src="./images/bg4.jpg">   
+                    <img src="./images/bg5.png">         
+                </div>
+                <ul class="prev">
+                    <li onclick="prevSlide();"></li>   
+                </ul>
+                <ul class="next">
+                    <li onclick="nextSlide();"></li>
+                </ul>
+                
+            </div>
+        </section>
+        <!--End of Skillset Section-->
+        <!--Contacts Section-->
+        <section>
 
-    </section>
-    <!--End of Skillset Section-->
-    <!--Contacts Section-->
-    <section>
-
-    </section>
-    <!--End of Contacts Section-->
-  </body>
-  <script src="./script/toggle.js" type="text/javascript"></script>
-  <script src="./script/scroll.js" type="text/javascript"></script>
+        </section>
+        <!--End of Contacts Section-->
+    </body>
+    <script src="./script/toggle.js" type="text/javascript"></script>
+    <script src="./script/slide.js" type="text/javascript"></script>
 </html>

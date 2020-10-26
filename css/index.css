@@ -1,41 +1,53 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
+@import url("http://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700, 800,900");
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background-color: #534caf;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-.logo {
-  color: rgb(226, 226, 226);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 30px;
+body {
+  background: #fff;
 }
 
-.nav-links {
+/* ==== HEADER ==== */
+header {
+  position: fixed;
+  background: grey;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  z-index: 1000;
+  padding: 20px 50px;
 }
 
-.nav-links li {
-  list-style-type: none;
-}
-
-.nav-links a {
-  color: rgb(226, 226, 226);
+header .logo {
+  position: relative;
+  color: black;
+  font-weight: 700;
+  font-size: 2em;
   text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 15px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style-type: none;
+  margin-left: 40px;
+}
+
+header ul li a {
+  color: black;
+  text-decoration: none;
 }
 
 .burger {
@@ -46,13 +58,13 @@ nav {
 .burger div {
   width: 25px;
   height: 5px;
-  background-color: rgb(226, 226, 226);
+  background-color: black;
   margin: 5px;
   transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1024px) {
-  .nav-links {
+  header ul {
     width: 60%;
   }
 }
@@ -62,21 +74,23 @@ nav {
     overflow-x: hidden;
   }
 
-  .nav-links {
+  header ul {
     position: absolute;
     right: 0px;
     height: 92vh;
     top: 10vh;
-    background-color: #534caf;
+    background: grey;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    opacity: 0.7;
   }
 
-  .nav-links li {
+  header ul li {
     opacity: 0;
   }
 
@@ -112,7 +126,9 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -9px);
 }
+/* ==== HEADER ==== */
 
+/* ==== HOME ==== */
 .container {
   text-align: center;
   padding-top: 120px;
@@ -135,30 +151,6 @@ nav {
 
 .icon {
   padding: 50px;
-}
-
-.fa {
-  padding: 20px;
-  font-size: 100px;
-  width: 60px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-github {
-  background: #007bb5;
-  color: white;
 }
 
 .btn {
@@ -192,17 +184,128 @@ nav {
 .btn-fill:focus {
   color: #fff;
 }
+/* ==== HOME ==== */
 
-.about {
-  text-align: center;
-  padding: 50px 0;
-  margin-right: auto;
-  margin-left: auto;
-  height: 100%;
+/* ==== SKILLSET ==== */
+.banner {
+  position: relative;
   width: 100%;
+  min-height: 100vh;
 }
 
-.about h1 {
-  font-size: 70px;
-  padding: 20px;
+.banner .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
+
+.banner .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.5s;
+  background-position: center;
+}
+
+.banner .imgBx img.active {
+  opacity: 1;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+}
+
+.prev li {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: white;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.prev li:hover {
+  background: grey;
+}
+
+.prev li:before {
+  content: "";
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  transform: rotate(45deg);
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 80px;
+}
+
+.next li {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: white;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.next li:hover {
+  background: grey;
+}
+
+.next li:before {
+  content: "";
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  transform: rotate(225deg);
+}
+/* ==== SKILLSET ==== */
+
+/* ==== ICONS ==== */
+.fa {
+  padding: 20px;
+  font-size: 100px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: #007bb5;
+  color: white;
+}
+/* ==== ICONS ==== */
