@@ -129,7 +129,7 @@ header ul li a {
 /* ==== HEADER ==== */
 
 /* ==== HOME ==== */
-.container {
+/*.container {
   text-align: center;
   padding-top: 120px;
   margin-right: auto;
@@ -183,7 +183,7 @@ header ul li a {
 .btn-fill:hover,
 .btn-fill:focus {
   color: #fff;
-}
+}*/
 /* ==== HOME ==== */
 
 /* ==== SKILLSET ==== */
@@ -286,7 +286,7 @@ header ul li a {
 /* ==== SKILLSET ==== */
 
 /* ==== ICONS ==== */
-.fa {
+/*.fa {
   padding: 20px;
   font-size: 100px;
   width: 50px;
@@ -307,5 +307,5 @@ header ul li a {
 .fa-github {
   background: #007bb5;
   color: white;
-}
+}*/
 /* ==== ICONS ==== */
