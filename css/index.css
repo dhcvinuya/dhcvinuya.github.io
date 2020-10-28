@@ -14,19 +14,19 @@ body {
 /* ==== HEADER ==== */
 header {
   position: fixed;
-  background: grey;
+  /*background: grey;*/
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-around;
   z-index: 1000;
-  padding: 20px 50px;
+  padding: 30px 100px;
 }
 
 header .logo {
   position: relative;
-  color: black;
+  color: white;
   font-weight: 700;
   font-size: 2em;
   text-decoration: none;
@@ -46,7 +46,7 @@ header ul li {
 }
 
 header ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -58,7 +58,7 @@ header ul li a {
 .burger div {
   width: 25px;
   height: 5px;
-  background-color: black;
+  background-color: white;
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -69,7 +69,7 @@ header ul li a {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
   body {
     overflow-x: hidden;
   }
@@ -128,65 +128,7 @@ header ul li a {
 }
 /* ==== HEADER ==== */
 
-/* ==== HOME ==== */
-/*.container {
-  text-align: center;
-  padding-top: 120px;
-  margin-right: auto;
-  margin-left: auto;
-  background: url(/images/home-bg.png) no-repeat center / cover;
-  height: 100%;
-  width: 100%;
-  min-height: 650px;
-}
-
-.container h1 {
-  font-size: 70px;
-  padding: 20px;
-}
-
-.job {
-  font-size: 25px;
-}
-
-.icon {
-  padding: 50px;
-}
-
-.btn {
-  min-width: 145px;
-  line-height: 50px;
-  padding: 20px 30px;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0;
-  transition: box-shadow 0.25s ease-in-out;
-  -moz-transition: box-shadow 0.25s ease-in-out;
-  -webkit-transition: box-shadow 0.25s ease-in-out;
-  -o-transition: box-shadow 0.25s ease-in-out;
-  -ms-transition: box-shadow 0.25s ease-in-out;
-}
-
-.btn-fill {
-  color: #fff;
-  background-color: #212121;
-}
-
-.btn-border {
-  background-color: transparent;
-  color: #212121;
-  border: 1px solid #212121;
-}
-
-.btn-fill:hover,
-.btn-fill:focus {
-  color: #fff;
-}*/
-/* ==== HOME ==== */
-
-/* ==== SKILLSET ==== */
+/* ==== BANNER ==== */
 .banner {
   position: relative;
   width: 100%;
@@ -216,18 +158,53 @@ header ul li a {
 .banner .imgBx img.active {
   opacity: 1;
 }
+/* ==== BANNER ==== */
 
+/* ==== CONTENT BOX ==== */
+.contentBx {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 700px;
+}
+
+.contentBx div {
+  display: none;
+}
+
+.contentBx div.active {
+  display: block;
+  padding: 30px;
+  padding-left: 100px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.contentBx div h2 {
+  color: #fff;
+  font-size: 2em;
+  align-items: center;
+}
+
+.contentBx div p {
+  color: #fff;
+  font-size: 1.1em;
+  text-align: center;
+}
+/* ==== CONTENT BOX ==== */
+
+/* ==== SLIDE CONTROL ==== */
 .prev {
   position: absolute;
   top: 50%;
+  left: 1%;
   transform: translateY(-50%);
   width: 80px;
 }
 
 .prev li {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: white;
   list-style: none;
   display: flex;
@@ -245,23 +222,23 @@ header ul li a {
   position: relative;
   width: 20px;
   height: 20px;
-  border-left: 3px solid black;
-  border-bottom: 3px solid black;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
   transform: rotate(45deg);
 }
 
 .next {
   position: absolute;
   top: 50%;
+  right: 1%;
   transform: translateY(-50%);
-  right: 0;
   width: 80px;
 }
 
 .next li {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: white;
   list-style: none;
   display: flex;
@@ -279,10 +256,18 @@ header ul li a {
   position: relative;
   width: 20px;
   height: 20px;
-  border-left: 3px solid black;
-  border-bottom: 3px solid black;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
   transform: rotate(225deg);
 }
+/* ==== SLIDE CONTROL ==== */
+
+/* ==== HOME ==== */
+
+/* ==== HOME ==== */
+
+/* ==== SKILLSET ==== */
+
 /* ==== SKILLSET ==== */
 
 /* ==== ICONS ==== */
@@ -294,16 +279,13 @@ header ul li a {
   text-decoration: none;
   margin: 5px 2px;
 }
-
 .fa:hover {
   opacity: 0.7;
 }
-
 .fa-linkedin {
   background: #007bb5;
   color: white;
 }
-
 .fa-github {
   background: #007bb5;
   color: white;
